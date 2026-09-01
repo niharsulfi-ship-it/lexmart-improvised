@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -233,79 +233,8 @@
     </defs>
   </svg>
 
-  <header>
-    <div class="nav-wrap">
-      <a href="index.html" class="logo" style="text-decoration: none;">
-        <img src="images/lexmart_logo_cropped.png" alt="Lexmart Logo" style="height:90px; width:auto; display:block; margin:0; padding:0;">
-      </a>
-      <nav class="links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <li class="nav-dropdown" style="list-style:none;">
-          <a href="service-corporate-law.html">Services <svg class="icon" style="width:14px;height:14px;">
-              <use href="#i-chevron" />
-            </svg></a>
-          <div class="nav-dropdown-menu">
-            <a href="service-corporate-law.html" class="dropdown-item">
-              <span class="di-icon"><svg class="icon" style="width:16px;height:16px;">
-                  <use href="#i-building" />
-                </svg></span>
-              <span class="di-text"><strong>Corporate Law</strong></span>
-            </a>
-            <a href="service-taxation.html" class="dropdown-item">
-              <span class="di-icon"><svg class="icon" style="width:16px;height:16px;">
-                  <use href="#i-rupee" />
-                </svg></span>
-              <span class="di-text"><strong>Taxation</strong></span>
-            </a>
-            <a href="service-intellectual-property.html" class="dropdown-item">
-              <span class="di-icon"><svg class="icon" style="width:16px;height:16px;">
-                  <use href="#i-shield" />
-                </svg></span>
-              <span class="di-text"><strong>Intellectual Property</strong></span>
-            </a>
-            <a href="service-business-compliance.html" class="dropdown-item">
-              <span class="di-icon"><svg class="icon" style="width:16px;height:16px;">
-                  <use href="#i-lock" />
-                </svg></span>
-              <span class="di-text"><strong>Business Compliance</strong></span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="service-advisory.html" class="dropdown-item">
-              <span class="di-icon"><svg class="icon" style="width:16px;height:16px;">
-                  <use href="#i-zap" />
-                </svg></span>
-              <span class="di-text"><strong>Advisory & Startup Advisory</strong></span>
-            </a>
-          </div>
-        </li>
-        <a href="team.html">Team</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="contact.html" class="btn-consult" style="
-        display:inline-flex;
-        align-items:center;
-        gap:8px;
-        padding:10px 20px;
-        background:linear-gradient(135deg,#062d80,#1f5cd4);
-        color:#fff;
-        font-size:14px;
-        font-weight:600;
-        border-radius:50px;
-        text-decoration:none;
-        white-space:nowrap;
-        box-shadow:0 4px 14px rgba(6,45,128,0.3);
-        transition:all .25s ease;
-      " onmouseover="this.style.boxShadow='0 6px 20px rgba(6,45,128,0.5)';this.style.transform='translateY(-1px)'" onmouseout="this.style.boxShadow='0 4px 14px rgba(6,45,128,0.3)';this.style.transform='translateY(0)'">
-        <svg style="width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Book a Consultation
-      </a>
-
-    </div>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu"><span></span><span></span><span></span></button>
-</header>
-<nav class="mobile-nav" id="mobileNav" style="display:none"><button class="mobile-close" id="mobileClose" aria-label="Close Menu">&times;</button><a href="index.html">Home</a><a href="about.html">About</a><span class="mobile-services-title" onclick="this.classList.toggle('open')">Services <i class="svc-chevron">&#9660;</i></span><div class="mobile-sub-links"><a href="service-corporate-law.html">Corporate Law</a><a href="service-taxation.html">Taxation</a><a href="service-intellectual-property.html">Intellectual Property</a><a href="service-business-compliance.html">Business Compliance</a><a href="service-advisory.html">Advisory</a></div><a href="team.html">Team</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a></nav><script>(function(){var btn=document.getElementById("hamburgerBtn");var nav=document.getElementById("mobileNav");var cl=document.getElementById("mobileClose");if(btn&&nav){btn.addEventListener("click",function(){nav.classList.toggle("open");btn.classList.toggle("open");document.body.style.overflow=nav.classList.contains("open")?"hidden":"";});if(cl)cl.addEventListener("click",function(){nav.classList.remove("open");btn.classList.remove("open");document.body.style.overflow="";});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");btn.classList.remove("open");document.body.style.overflow="";});});}})();</script>
+  <div id="site-header"></div>
+  <script src="header.js" defer></script>
 
   <section class="hero">
     <div class="hero-grid">
@@ -315,7 +244,8 @@
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
           </svg> EXPERT CORPORATE & BUSINESS ADVISORS</span>
-        <h1><span class="hero-black">Simplifying Compliance.</span><br>Strengthening Your<br><span class="accent">Business.</span></h1>
+        <h1><span class="hero-black">Simplifying Business Compliance.</span><br>Strengthening Your<br><span
+            class="accent">Business.</span></h1>
         <p>Empowering startups, entrepreneurs, SMEs, and enterprises with end-to-end corporate, compliance, and advisory
           solutions so you can focus on what matters most &mdash; growing your business.</p>
         <div class="hero-ctas">
@@ -402,7 +332,8 @@
     <div class="container">
       <div class="center"><span class="eyebrow">WHAT WE DO</span></div>
       <h2 class="section-title">Our Professional Services</h2>
-      <p class="section-sub">End-to-end corporate and compliance expertise, delivered with the precision and clarity modern
+      <p class="section-sub">End-to-end corporate and compliance expertise, delivered with the precision and clarity
+        modern
         businesses expect.</p>
       <div class="services-grid">
 
@@ -719,22 +650,35 @@
 
   <section style="padding: 60px 0; background: var(--white);">
     <div class="container">
-      <div style="position: relative; max-width: 1172px; margin: 0 auto; background: linear-gradient(135deg, #062d80, #1f5cd4); border-radius: 26px; padding: 70px 24px; text-align: center; color: #fff; overflow: hidden; box-shadow: 0 20px 40px rgba(6, 45, 128, 0.2);">
-        
+      <div
+        style="position: relative; max-width: 1172px; margin: 0 auto; background: linear-gradient(135deg, #062d80, #1f5cd4); border-radius: 26px; padding: 70px 24px; text-align: center; color: #fff; overflow: hidden; box-shadow: 0 20px 40px rgba(6, 45, 128, 0.2);">
+
         <!-- Decorative bg -->
-        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.05); border-radius: 50%; pointer-events: none;"></div>
-        <div style="position: absolute; bottom: -80px; left: -20px; width: 250px; height: 250px; border: 40px solid rgba(255,255,255,0.03); border-radius: 50%; pointer-events: none;"></div>
+        <div
+          style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.05); border-radius: 50%; pointer-events: none;">
+        </div>
+        <div
+          style="position: absolute; bottom: -80px; left: -20px; width: 250px; height: 250px; border: 40px solid rgba(255,255,255,0.03); border-radius: 50%; pointer-events: none;">
+        </div>
 
         <div style="position: relative; z-index: 2;">
-          <span class="eyebrow" style="background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">FREE ASSESSMENT</span>
-          <h2 style="color: #fff; font-size: 35.2px; margin-bottom: 16px; font-family: 'Poppins', sans-serif;">Business Health Check-up</h2>
-          <p style="color: rgba(255,255,255,0.9); font-size: 16.5px; max-width: 640px; margin: 0 auto 30px; line-height: 1.6;">
-            Are you fully compliant? Is your business adequately protected? Take our free health check-up to identify any regulatory gaps or compliance vulnerabilities before they become problems.
+          <span class="eyebrow"
+            style="background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">FREE
+            ASSESSMENT</span>
+          <h2 style="color: #fff; font-size: 35.2px; margin-bottom: 16px; font-family: 'Poppins', sans-serif;">Business
+            Health Check-up</h2>
+          <p
+            style="color: rgba(255,255,255,0.9); font-size: 16.5px; max-width: 640px; margin: 0 auto 30px; line-height: 1.6;">
+            Are you fully compliant? Is your business adequately protected? Take our free health check-up to identify
+            any regulatory gaps or compliance vulnerabilities before they become problems.
           </p>
-          
-          <div style="background: rgba(0,0,0,0.15); padding: 24px; border-radius: 14px; border: 1px dashed rgba(255,255,255,0.2); max-width: 500px; margin: 0 auto 30px;">
+
+          <div
+            style="background: rgba(0,0,0,0.15); padding: 24px; border-radius: 14px; border: 1px dashed rgba(255,255,255,0.2); max-width: 500px; margin: 0 auto 30px;">
             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
-              <svg class="icon" style="width: 32px; height: 32px; color: #fff;"><use href="#i-shield-check" /></svg>
+              <svg class="icon" style="width: 32px; height: 32px; color: #fff;">
+                <use href="#i-shield-check" />
+              </svg>
             </div>
             <p style="color: #fff; margin-bottom: 0; font-size: 15.4px; font-weight: 500;">
               Our comprehensive assessment questionnaire is coming soon.
@@ -743,9 +687,11 @@
               In the meantime, reach out to us for a direct assessment.
             </p>
           </div>
-          
+
           <a href="contact.html" class="btn btn-white" style="font-size: 15.4px; display: inline-flex;">
-            Contact Us <svg class="icon" style="width:16px;height:16px;"><use href="#i-arrow" /></svg>
+            Contact Us <svg class="icon" style="width:16px;height:16px;">
+              <use href="#i-arrow" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1000,77 +946,101 @@
       <div class="marquee-track row1">
         <!-- Set 1 -->
         <div class="client-card">
-          <img src="lexmart_clients/aa.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/aa.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/didi.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/didi.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/isl.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/isl.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jm.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jm.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jonnette.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jonnette.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/nova.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/nova.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/orient.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/orient.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/powergrid.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/powergrid.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/raj.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/raj.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/taste.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/taste.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/tph.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/tph.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/vardman.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/vardman.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <!-- Set 2 (duplicate for seamless loop) -->
         <div class="client-card">
-          <img src="lexmart_clients/aa.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/aa.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/didi.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/didi.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/isl.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/isl.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jm.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jm.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jonnette.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jonnette.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/nova.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/nova.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/orient.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/orient.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/powergrid.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/powergrid.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/raj.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/raj.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/taste.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/taste.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/tph.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/tph.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/vardman.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/vardman.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
       </div>
     </div>
@@ -1080,77 +1050,101 @@
       <div class="marquee-track row2">
         <!-- Set 1 -->
         <div class="client-card">
-          <img src="lexmart_clients/vardman.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/vardman.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/tph.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/tph.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/taste.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/taste.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/raj.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/raj.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/powergrid.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/powergrid.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/orient.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/orient.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/nova.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/nova.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jonnette.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jonnette.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jm.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jm.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/isl.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/isl.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/didi.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/didi.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/aa.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/aa.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <!-- Set 2 (duplicate for seamless loop) -->
         <div class="client-card">
-          <img src="lexmart_clients/vardman.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/vardman.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/tph.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/tph.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/taste.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/taste.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/raj.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/raj.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/powergrid.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/powergrid.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/orient.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/orient.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/nova.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/nova.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jonnette.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jonnette.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/jm.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/jm.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/isl.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/isl.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/didi.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/didi.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
         <div class="client-card">
-          <img src="lexmart_clients/aa.png" alt="Client Logo" style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
+          <img src="lexmart_clients/aa.png" alt="Client Logo"
+            style="max-height:60px;max-width:130px;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;">
         </div>
       </div>
     </div>
@@ -1211,7 +1205,7 @@
               </svg></a>
           </div>
         </article>
-        <article class="blog-card"> 
+        <article class="blog-card">
           <div class="blog-thumb">
             <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Trademark blog">
           </div>
@@ -1248,7 +1242,8 @@
         <div class="faq-item active" onclick="toggleFaq(this)">
           <div class="faq-q"><span>How long does company registration take?</span><span class="faq-toggle">-</span>
           </div>
-          <div class="faq-a">Most private limited registrations complete within 7&ndash;10 working days once documents and
+          <div class="faq-a">Most private limited registrations complete within 7&ndash;10 working days once documents
+            and
             digital signatures are in place. We share a live status tracker throughout.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
@@ -1263,7 +1258,8 @@
             retainer basis.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q"><span>What happens in the initial consultation?</span><span class="faq-toggle">+</span></div>
+          <div class="faq-q"><span>What happens in the initial consultation?</span><span class="faq-toggle">+</span>
+          </div>
           <div class="faq-a">We review your business goals and current regulatory exposure, then map out exactly which
             filings and protections you need.</div>
         </div>
@@ -1294,7 +1290,7 @@
     </div>
   </section>
 
-    <footer>
+  <footer>
     <div class="container">
       <div class="footer-grid">
         <!-- Brand -->
@@ -1303,7 +1299,8 @@
             <img src="images/white_logo.png" alt="Lexmart Logo"
               style="height:140px; width:auto; object-fit:contain; border-radius:8px;">
           </a>
-          <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing compliance.</p>
+          <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing
+            compliance.</p>
           <div class="social-row">
             <a class="social-circle" href="#"><svg class="icon" style="width:16px;height:16px;">
                 <use href="#i-linkedin" />
@@ -1356,20 +1353,23 @@
           <ul class="contact-list">
             <li><svg class="icon">
                 <use href="#i-phone" />
-              </svg><span><a href="tel:+919999028148">+91 99990-28148</a><br><a href="tel:+919811541004">+91 98115-41004</a></span></li>
+              </svg><span><a href="tel:+919999028148">+91 99990-28148</a><br><a href="tel:+919811541004">+91
+                  98115-41004</a></span></li>
             <li><svg class="icon">
                 <use href="#i-mail" />
               </svg><span><a href="mailto:connect@lexmart.co.in">connect@lexmart.co.in</a></span></li>
             <li><svg class="icon">
                 <use href="#i-pin" />
-              </svg><span><span style="white-space:nowrap;">Lexmart Corporate Solutions LLP</span><br>I-23, L.G.F., Lajpat Nagar- III,<br>New Delhi- 110024.</span></li>
+              </svg><span><span style="white-space:nowrap;">Lexmart Corporate Solutions LLP</span><br>I-23, L.G.F.,
+                Lajpat Nagar- III,<br>New Delhi- 110024.</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>Copyright &copy; 2026 Lexmart, All rights reserved.</span>
         <span>Built for founders who move fast.</span>
-        <span>Made with ❤️ by <a href="https://brandmindz.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Brand Mindz</a></span>
+        <span>Made with ❤️ by <a href="https://brandmindz.com/" target="_blank" rel="noopener"
+            style="color: inherit; text-decoration: underline;">Brand Mindz</a></span>
       </div>
     </div>
   </footer>
@@ -1390,10 +1390,10 @@
         return Number.isNaN(date.getTime())
           ? ''
           : new Intl.DateTimeFormat('en-IN', {
-              day: 'numeric',
-              month: 'short',
-              year: 'numeric'
-            }).format(date);
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          }).format(date);
       }
 
       function createBlogCard(blog) {
