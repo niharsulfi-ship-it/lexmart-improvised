@@ -89,6 +89,25 @@
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && menu.classList.contains("open")) setMenu(false);
     });
+
+    const headerMount = document.getElementById("site-header");
+    let scrollTicking = false;
+
+    function updateHeaderOnScroll() {
+      const currentScrollY = Math.max(window.scrollY, 0);
+      if (currentScrollY >= 40) headerMount.classList.add("is-scrolled");
+      else if (currentScrollY <= 8) headerMount.classList.remove("is-scrolled");
+      scrollTicking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(updateHeaderOnScroll);
+        scrollTicking = true;
+      }
+    }, { passive: true });
+    window.addEventListener("resize", updateHeaderOnScroll);
+    updateHeaderOnScroll();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderHeader);
   else renderHeader();

@@ -5,7 +5,7 @@ const filePath = path.join(__dirname, 'index.html');
 let content = fs.readFileSync(filePath, 'utf8');
 
 // All 12 client logos from lexmart_clients folder
-const logos = ['aa.png','didi.png','isl.png','jm.png','jonnette.png','nova.png','orient.png','powergrid.png','raj.png','taste.png','tph.png','vardman.png'];
+const logos = ['aa.png','didi.png','isl.png','jm.png','jonnette.png','nova.png','orient.png','powergrid.png','raj.png','taste.png','tph.png','vardman.png','Infozeb.png','stabor.png','vectorwings.png'];
 
 // Build image card HTML for a logo
 function makeCard(logo) {

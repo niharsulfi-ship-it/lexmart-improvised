@@ -50,6 +50,11 @@
   .section-tab:hover { color: #0C46BB; }
   .section-tab.active { color: #0C46BB; border-bottom-color: #0C46BB; }
   .section-tab .tab-icon { width: 18px; height: 18px; border-radius: 50%; background: #eef4ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .tax-services-list { display: flex; flex-direction: column; }
+  #tax-planning { order: 1; background: #ffffff; }
+  #income-tax { order: 2; background: #eef4ff; }
+  #gst { order: 3; background: #ffffff; }
+  #tds { order: 4; background: #eef4ff; }
 
   .svc-section { padding: 90px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 140px; }
   .svc-section:nth-child(even) { background: #eef4ff; }
@@ -154,13 +159,14 @@
 
 <div class="section-tabs-wrap">
   <div class="section-tabs">
-    <a href="#gst" class="section-tab active" id="tab-gst"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-doc"/></svg></span>GST</a>
+    <a href="#tax-planning" class="section-tab active" id="tab-planning"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-shield"/></svg></span>Tax Planning</a>
     <a href="#income-tax" class="section-tab" id="tab-income"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-rupee"/></svg></span>Income Tax</a>
+    <a href="#gst" class="section-tab" id="tab-gst"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-doc"/></svg></span>GST</a>
     <a href="#tds" class="section-tab" id="tab-tds"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-calc"/></svg></span>TDS</a>
-    <a href="#tax-planning" class="section-tab" id="tab-planning"><span class="tab-icon"><svg class="icon" style="width:11px;height:11px;color:#047857"><use href="#i-shield"/></svg></span>Tax Planning</a>
   </div>
 </div>
 
+<div class="tax-services-list">
 <!-- GST -->
 <section class="svc-section" id="gst">
   <div class="container">
@@ -197,7 +203,7 @@
           <div class="svc-feat-item"><span class="fi-dot">?</span> E-Way Bill Registration & Compliance</div>
         </div>
         <div class="svc-actions">
-          <button class="btn btn-green" id="gst-consult">Get Started <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-green" id="gst-consult"   onclick="window.location.href='/contact.html'">Get Started <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </div>
@@ -238,7 +244,8 @@
           <div class="svc-feat-item"><span class="fi-dot">?</span> International Tax Advisory</div>
         </div>
         <div class="svc-actions">
-          <button class="btn btn-green" id="it-consult">Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-green" id="it-consult"   onclick="window.location.href='/contact.html'"
+>Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </div>
@@ -275,7 +282,8 @@
           <div class="svc-feat-item"><span class="fi-dot">?</span> TDS-Related Regulatory Support</div>
         </div>
         <div class="svc-actions">
-          <button class="btn btn-green" id="tds-consult">Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-green" id="tds-consult"   onclick="window.location.href='/contact.html'"
+>Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </div>
@@ -314,12 +322,14 @@
           <div class="svc-feat-item"><span class="fi-dot">?</span> Tax Compliance Review</div>
         </div>
         <div class="svc-actions">
-          <button class="btn btn-green" id="plan-consult">Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-green" id="plan-consult"   onclick="window.location.href='/contact.html'"
+>Consult an Expert <svg class="icon" style="width:15px;height:15px;"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </div>
   </div>
 </section>
+</div>
 
 <!-- Why Choose -->
 <section class="why-section">
@@ -440,7 +450,7 @@
   </footer>
 
 <script>
-  const sections = ['gst','income-tax','tds','tax-planning'];
+  const sections = ['tax-planning','income-tax','gst','tds'];
   const tabs = {'gst':'tab-gst','income-tax':'tab-income','tds':'tab-tds','tax-planning':'tab-planning'};
   window.addEventListener('scroll', () => {
     let current = sections[0];
