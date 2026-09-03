@@ -3,25 +3,26 @@ const path = require('path');
 
 const dir = __dirname;
 const files = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
-
-const oldStr = 'href="style.css"';
-const newStr = 'href="style.css?v=2.1"';
+const now = new Date();
+const pad = value => String(value).padStart(2, '0');
+const generatedVersion = [
+  now.getFullYear(),
+  pad(now.getMonth() + 1),
+  pad(now.getDate())
+].join('') + '.' + pad(now.getHours()) + pad(now.getMinutes());
+const version = process.argv[2] || generatedVersion;
 
 for (const file of files) {
   const p = path.join(dir, file);
   let content = fs.readFileSync(p, 'utf8');
-  let changed = false;
-
-  // Replace any existing style.css query strings as well just in case
-  const regex = /href="style\.css(\?v=[0-9.]+)?"/g;
+  const updated = content
+    .replace(/href="style\.css(?:\?v=[^"]+)?"/g, `href="style.css?v=${version}"`)
+    .replace(/src="header\.js(?:\?v=[^"]+)?"/g, `src="header.js?v=${version}"`);
   
-  if (regex.test(content)) {
-    content = content.replace(regex, newStr);
-    changed = true;
-  }
-  
-  if (changed) {
-    fs.writeFileSync(p, content, 'utf8');
+  if (updated !== content) {
+    fs.writeFileSync(p, updated, 'utf8');
     console.log(`Updated cache buster in ${file}`);
   }
 }
+
+console.log(`Asset version: ${version}`);

@@ -2434,7 +2434,7 @@ nav.links {
 
 /* Floating header morph on scroll */
 #site-header {
-  perspective: 1000px;
+  perspective: none;
   height: 90px;
 }
 
@@ -2458,7 +2458,7 @@ nav.links {
   margin: 0 auto;
   border: 1px solid transparent;
   border-radius: 0;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   transform-origin: top center;
   transition: width .42s cubic-bezier(.22, 1, .36, 1),
               max-width .42s cubic-bezier(.22, 1, .36, 1),
@@ -2467,7 +2467,13 @@ nav.links {
               transform .42s cubic-bezier(.22, 1, .36, 1),
               background-color .35s ease,
               box-shadow .35s ease;
-  will-change: width, transform, border-radius;
+  will-change: width, border-radius;
+}
+
+/* Keep the raster logo on stable pixels instead of resizing it mid-scroll. */
+#site-header .logo img {
+  transition: none;
+  image-rendering: auto;
 }
 
 #site-header.is-scrolled .site-header {
@@ -2477,7 +2483,7 @@ nav.links {
   border-color: rgba(12, 70, 187, .12);
   border-radius: 18px;
   box-shadow: 0 16px 45px rgba(6, 45, 128, .18);
-  transform: translateY(12px) scale(.985);
+  transform: translateY(12px);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -2500,7 +2506,7 @@ nav.links {
   #site-header.is-scrolled .site-header {
     width: calc(100% - 16px);
     border-radius: 14px;
-    transform: translateY(8px) scale(.99);
+    transform: translateY(8px);
   }
 }
 
