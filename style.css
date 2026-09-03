@@ -166,7 +166,8 @@ header {
 .mobile-nav,
 .mobile-nav button,
 .mobile-nav a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 17.6px;
 }
 
 .nav-wrap {
@@ -1923,7 +1924,7 @@ footer ul li a:hover {
   font-size: 22px;
   font-weight: 600;
   color: var(--ink);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   padding: 8px 0;
   border-bottom: 1px solid var(--border);
   width: 100%;
