@@ -2525,3 +2525,182 @@ nav.links {
     transition: none !important;
   }
 }
+
+/* Mobile homepage polish: keep the hero readable and sections from colliding. */
+@media (max-width: 600px) {
+  #site-header {
+    height: 76px;
+    /* A perspective value makes fixed descendants use the header as their
+       containing block, which clipped the full-screen mobile menu. */
+    perspective: none;
+  }
+
+  #site-header .site-header,
+  #site-header.is-scrolled .site-header {
+    width: 100%;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    transform: none;
+  }
+
+  .nav-wrap {
+    min-height: 76px;
+    padding: 0 16px;
+  }
+
+  .logo img,
+  #site-header.is-scrolled .logo img {
+    width: min(245px, calc(100vw - 82px)) !important;
+    height: auto !important;
+    max-height: 64px;
+    margin: 0 !important;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-nav,
+  .mobile-nav.open {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    z-index: 999;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: max(76px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom));
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mobile-nav a {
+    flex: 0 0 auto;
+    padding: 12px 0;
+    font-size: 19px;
+  }
+
+  .mobile-nav .mobile-services-title {
+    flex: 0 0 auto;
+    margin-top: 0;
+    padding: 12px 0;
+  }
+
+  .mobile-nav .mobile-sub-links {
+    flex: 0 0 auto;
+    margin: 0 0 4px;
+  }
+
+  .mobile-close {
+    position: fixed;
+    top: max(18px, env(safe-area-inset-top));
+    right: 20px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(247, 250, 255, .97) 0%, rgba(247, 250, 255, .91) 58%, rgba(247, 250, 255, .62) 100%);
+  }
+
+  .hero .hero-grid > div:first-child {
+    padding: 44px 20px 38px;
+  }
+
+  .hero .eyebrow {
+    max-width: 100%;
+    margin-bottom: 22px;
+    padding: 7px 12px;
+    font-size: 10.5px;
+    line-height: 1.35;
+    letter-spacing: .035em;
+    white-space: normal;
+  }
+
+  .hero h1 {
+    max-width: 350px;
+    margin-bottom: 20px;
+    font-size: clamp(29px, 8.4vw, 36px);
+    line-height: 1.16;
+  }
+
+  .hero p {
+    max-width: 38rem;
+    margin-bottom: 26px;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .hero-ctas {
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas .btn {
+    min-height: 52px;
+  }
+
+  .hero-rating {
+    font-size: 13.5px;
+  }
+
+  .hero-rating .rating-group {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .hero .hero-img-h1 {
+    object-position: 64% center;
+  }
+
+  .stats-strip {
+    margin-top: 0;
+    padding: 24px 16px 40px;
+  }
+
+  .stats-row-new {
+    padding: 12px 20px;
+    gap: 0;
+    border-radius: 18px;
+  }
+
+  .stat-card-new {
+    gap: 14px;
+    padding: 22px 0;
+  }
+
+  .stat-card-new:not(:last-child) {
+    padding-right: 0;
+    padding-bottom: 22px;
+  }
+
+  .stat-card-new .stat-content strong {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .stat-card-new .stat-content p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
