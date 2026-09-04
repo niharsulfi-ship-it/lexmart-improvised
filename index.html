@@ -11,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260903.3">
+  <link rel="stylesheet" href="style.css?v=20260904.5">
   <style>
     /* -- Moving Blue Gradient Animation -- */
     @keyframes moveGradient {
@@ -44,6 +44,7 @@
       animation: moveGradient 8s ease infinite !important;
       box-shadow: 0 20px 60px rgba(2, 11, 51, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 48px 24px;
     }
 
     .cta-banner::after {
@@ -234,58 +235,46 @@
   </svg>
 
   <div id="site-header"></div>
-  <script src="header.js?v=20260903.3" defer></script>
+  <script src="header.js?v=20260904.2" defer></script>
 
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="animate-slide-up">
-        <span class="eyebrow"><svg class="icon" style="width:14px;height:14px;fill:currentColor;stroke:none;"
-            viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-          </svg> EXPERT CORPORATE & BUSINESS ADVISORS</span>
-        <h1><span class="hero-black">Simplifying Business Compliance.</span><br>Strengthening Your<br><span
-            class="accent">Business.</span></h1>
-        <p>Empowering startups, entrepreneurs, SMEs, and enterprises with end-to-end corporate, compliance, and advisory
-          solutions so you can focus on what matters most &mdash; growing your business.</p>
-        <div class="hero-ctas">
-          <button class="btn btn-outline">Explore Services <svg class="icon" style="width:16px;height:16px;">
-              <use href="#i-arrow" />
-            </svg></button>
-        </div>
-        <div class="hero-rating">
-          <div class="rating-group">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Trusted by 500+ Businesses</span>
-          </div>
-        </div>
+  <section class="hero hero-slider" aria-roledescription="carousel" aria-label="Lexmart highlights">
+    <article class="hero-slide is-active" data-slide="0" aria-hidden="false">
+      <video muted playsinline preload="metadata" poster="images/building_hero_banner.jpg">
+        <source src="images/v4.mp4" type="video/mp4">
+      </video>
+      <div class="hero-slide-shade"></div>
+      <div class="container hero-slide-content">
+        <h1 class="hero-company-heading"><span>Lexmart Corporate LLP</span><br><em class="hero-tagline">Simplifying Business. Strengthening Growth.</em></h1>
+        <p>End-to-end corporate, compliance and advisory solutions built for ambitious businesses.</p>
+        <a class="hero-slide-cta" href="service-corporate-law.html">Explore Our Services <svg class="icon"><use href="#i-arrow" /></svg></a>
       </div>
-      <div class="hero-visual-new animate-fade-in delay-200">
-        <img src="images/h1.png" alt="Lexmart Banner" class="hero-img hero-img-h1">
+    </article>
 
-        <div class="floating-cards-container">
-          <div class="float-card-new animate-slide-up delay-300">
-            <div class="icon-box"><svg class="icon">
-                <use href="#i-building" />
-              </svg></div>
-            <div class="card-text"><strong>500+</strong><span>Company Registrations</span></div>
-          </div>
-          <div class="float-card-new">
-            <div class="icon-box"><svg class="icon">
-                <use href="#i-shield-check" />
-              </svg></div>
-            <div class="card-text"><strong>98%</strong><span>Trademark Success Rate</span></div>
-          </div>
-          <div class="float-card-new">
-            <div class="icon-box"><svg class="icon">
-                <use href="#i-doc" />
-              </svg></div>
-            <div class="card-text"><strong>1000+</strong><span>GST &amp; Compliance<br>Cases Handled</span></div>
-          </div>
-        </div>
+    <article class="hero-slide" data-slide="1" aria-hidden="true">
+      <video muted playsinline preload="metadata" poster="images/building_hero_banner.jpg">
+        <source src="images/v5.mp4" type="video/mp4">
+      </video>
+      <div class="hero-slide-shade"></div>
+      <div class="container hero-slide-content">
+        <h1>Clarity for Every<br><em>Business Decision.</em></h1>
+        <p>Responsive guidance that keeps your organisation protected, prepared and moving forward.</p>
+        <a class="hero-slide-cta" href="service-business-compliance.html">Explore Compliance <svg class="icon"><use href="#i-arrow" /></svg></a>
       </div>
-    </div>
+    </article>
+
+    <article class="hero-slide" data-slide="2" aria-hidden="true">
+      <video muted playsinline preload="metadata" poster="images/building_hero_banner.jpg">
+        <source src="images/v3.mp4" type="video/mp4">
+      </video>
+      <div class="hero-slide-shade"></div>
+      <div class="container hero-slide-content">
+        <h1>Protecting Ideas.<br><em>Empowering Enterprise.</em></h1>
+        <p>Practical legal insight across corporate law, taxation, intellectual property and business advisory.</p>
+        <a class="hero-slide-cta" href="contact.html">Consult Our Experts <svg class="icon"><use href="#i-arrow" /></svg></a>
+      </div>
+    </article>
   </section>
+  <script src="hero-slider.js?v=20260904.2" defer></script>
 
   <div class="container stats-strip">
     <div class="stats-row-new">
@@ -1349,14 +1338,11 @@
   <section>
     <div class="container">
       <div class="cta-banner">
+        <video class="cta-banner-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="images/c1.mp4" type="video/mp4">
+        </video>
         <h2>Need Professional Assistance?</h2>
         <p>Contact our experts and let us simplify your business journey.</p>
-        <div style="margin: 30px 0; display: flex; justify-content: center;">
-          <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/zpxyqjsy.json" trigger="loop"
-            colors="primary:#ffffff,secondary:#d6e4ff" style="width:90px;height:90px">
-          </lord-icon>
-        </div>
         <a href="contact.html" class="btn btn-white">Contact Us <svg class="icon" style="width:16px;height:16px;">
             <use href="#i-arrow" />
           </svg></a>

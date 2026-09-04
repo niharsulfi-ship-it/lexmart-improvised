@@ -17,7 +17,8 @@ for (const file of files) {
   let content = fs.readFileSync(p, 'utf8');
   const updated = content
     .replace(/href="style\.css(?:\?v=[^"]+)?"/g, `href="style.css?v=${version}"`)
-    .replace(/src="header\.js(?:\?v=[^"]+)?"/g, `src="header.js?v=${version}"`);
+    .replace(/src="header\.js(?:\?v=[^"]+)?"/g, `src="header.js?v=${version}"`)
+    .replace(/src="hero-slider\.js(?:\?v=[^"]+)?"/g, `src="hero-slider.js?v=${version}"`);
   
   if (updated !== content) {
     fs.writeFileSync(p, updated, 'utf8');
