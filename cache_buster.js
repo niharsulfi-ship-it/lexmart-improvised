@@ -17,8 +17,8 @@ const version = process.argv[2] || generatedVersion;
 const headerPath = path.join(dir, 'header.js');
 const header = fs.readFileSync(headerPath, 'utf8');
 fs.writeFileSync(headerPath, header.replace(
-  /images\/lexmart_logo_cropped4\.png(?:\?v=[^"']+)?/g,
-  `images/lexmart_logo_cropped4.png?v=${version}`
+  /images\/lexmart_logo_header\.png(?:\?v=[^"']+)?/g,
+  `images/lexmart_logo_header?v=${version}`
 ));
 
 for (const file of files) {
