@@ -42,7 +42,7 @@
 
     mount.innerHTML =
       '<header class="site-header"><div class="nav-wrap">' +
-        '<a href="index.html" class="logo" aria-label="Lexmart home"><img src="images/lexmart_logo_cropped.png" alt="Lexmart"></a>' +
+        '<a href="index.html" class="logo" aria-label="Lexmart home"><img src="images/lexmart_logo_cropped4.png?v=20260907.2" width="500" height="132" alt="Lexmart"></a>' +
         '<nav class="links" aria-label="Primary navigation">' +
           '<a href="index.html" class="' + activeClass("index.html", current).trim() + '">Home</a>' +
           '<a href="about.html" class="' + activeClass("about.html", current).trim() + '">About</a>' +

@@ -208,6 +208,9 @@ header {
 .logo img {
   height: 90px !important;
   width: auto !important;
+  max-width: 280px;
+  object-fit: contain;
+  object-position: left center;
   display: block;
   margin: 0;
   padding: 0;

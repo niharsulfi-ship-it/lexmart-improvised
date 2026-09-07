@@ -12,6 +12,15 @@ const generatedVersion = [
 ].join('') + '.' + pad(now.getHours()) + pad(now.getMinutes());
 const version = process.argv[2] || generatedVersion;
 
+// The logo can be replaced without changing its filename. Refresh its URL
+// together with the script so returning visitors receive the new image.
+const headerPath = path.join(dir, 'header.js');
+const header = fs.readFileSync(headerPath, 'utf8');
+fs.writeFileSync(headerPath, header.replace(
+  /images\/lexmart_logo_cropped4\.png(?:\?v=[^"']+)?/g,
+  `images/lexmart_logo_cropped4.png?v=${version}`
+));
+
 for (const file of files) {
   const p = path.join(dir, file);
   let content = fs.readFileSync(p, 'utf8');
