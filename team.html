@@ -484,7 +484,7 @@
   }
   .assoc-card:hover { background: #eef4ff; box-shadow: 0 12px 30px rgba(12,70,187,0.15); transform: translateY(-4px); }
   .assoc-avatar {
-    width: 52px; height: 52px;
+    width: 66px; height: 66px;
     border-radius: 50%;
     background: var(--blue-700);
     color: #ffffff;
@@ -494,8 +494,17 @@
     font-weight: 700;
     flex-shrink: 0;
   }
-  .assoc-body h4 { font-size: 16px; color: var(--blue-800); margin-bottom: 3px; font-weight: 700; }
-  .assoc-body .quals { font-size: 11.5px; font-weight: 600; color: var(--blue-700); margin-bottom: 8px; }
+  img.assoc-avatar,
+  img.partner-avatar {
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    background: #dbeafe !important;
+    animation: none !important;
+    border: 2px solid #dbeafe;
+  }
+  .assoc-body h4 { font-size: 18px; color: var(--blue-800); margin-bottom: 5px; font-weight: 700; }
+  .assoc-body .quals { font-size: 13px; font-weight: 600; color: var(--blue-700); margin-bottom: 8px; }
   .assoc-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
 
   /* Why Lexmart */
@@ -646,21 +655,21 @@
 <section class="team-section" id="fullTeamSection" style="padding: 80px 0;">
   <div class="container">
     <div class="associates-row">
-      <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">JS</div><div class="assoc-body"><h4>Jasmeet Singh</h4><div class="quals">Senior Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-200"><div class="assoc-avatar">RJ</div><div class="assoc-body"><h4>Riya Jain</h4><div class="quals">Senior Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">CL</div><div class="assoc-body"><h4>Chirag Luthra</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-100"><img class="assoc-avatar" src="images/team/jasmeet-singh.webp" alt="Jasmeet Singh" loading="lazy"><div class="assoc-body"><h4>Jasmeet Singh</h4><div class="quals">Senior Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-200"><img class="assoc-avatar" src="images/team/riya-jain.webp" alt="Riya Jain" loading="lazy"><div class="assoc-body"><h4>Riya Jain</h4><div class="quals">Senior Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-300"><img class="assoc-avatar" src="images/team/chirag-luthra.webp" alt="Chirag Luthra" loading="lazy"><div class="assoc-body"><h4>Chirag Luthra</h4><div class="quals">Associate</div></div></div>
       <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">SM</div><div class="assoc-body"><h4>Shravan Mandal</h4><div class="quals">Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-200"><div class="assoc-avatar">VG</div><div class="assoc-body"><h4>Vibhi Gupta</h4><div class="quals">Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">K</div><div class="assoc-body"><h4>Kasim</h4><div class="quals">Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">SK</div><div class="assoc-body"><h4>Swati Kapoor</h4><div class="quals">Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-200"><div class="assoc-avatar">PK</div><div class="assoc-body"><h4>Praveen Kumar</h4><div class="quals">Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">SG</div><div class="assoc-body"><h4>Swati Gullwani</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-200"><img class="assoc-avatar" src="images/team/vibhi-gupta.webp" alt="Vibhi Gupta" loading="lazy"><div class="assoc-body"><h4>Vibhi Gupta</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-300"><img class="assoc-avatar" src="images/team/kasim.webp" alt="Kasim" loading="lazy"><div class="assoc-body"><h4>Kasim</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-100"><img class="assoc-avatar" src="images/team/swati-kapoor.webp" alt="Swati Kapoor" loading="lazy"><div class="assoc-body"><h4>Swati Kapoor</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-200"><img class="assoc-avatar" src="images/team/praveen-kumar.webp" alt="Praveen Kumar" loading="lazy"><div class="assoc-body"><h4>Praveen Kumar</h4><div class="quals">Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-300"><img class="assoc-avatar" src="images/team/swati-gullwani.webp" alt="Swati Gullwani" loading="lazy"><div class="assoc-body"><h4>Swati Gullwani</h4><div class="quals">Associate</div></div></div>
       <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">RK</div><div class="assoc-body"><h4>Rinky Kushwaha</h4><div class="quals">Process Associate</div></div></div>
       <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">VG</div><div class="assoc-body"><h4>Vaishali Gupta</h4><div class="quals">Process Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">N</div><div class="assoc-body"><h4>Naazreen</h4><div class="quals">Process Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-200"><div class="assoc-avatar">S</div><div class="assoc-body"><h4>Saba</h4><div class="quals">Process Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">A</div><div class="assoc-body"><h4>Anish</h4><div class="quals">Process Associate</div></div></div>
-      <div class="assoc-card animate-slide-up delay-100"><div class="assoc-avatar">M</div><div class="assoc-body"><h4>Mudassir</h4><div class="quals">Process Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-100"><img class="assoc-avatar" src="images/team/naazreen.webp" alt="Naazreen" loading="lazy"><div class="assoc-body"><h4>Naazreen</h4><div class="quals">Process Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-200"><img class="assoc-avatar" src="images/team/saba.webp" alt="Saba" loading="lazy"><div class="assoc-body"><h4>Saba</h4><div class="quals">Process Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-300"><img class="assoc-avatar" src="images/team/anish.webp" alt="Anish" loading="lazy"><div class="assoc-body"><h4>Anish</h4><div class="quals">Process Associate</div></div></div>
+      <div class="assoc-card animate-slide-up delay-100"><img class="assoc-avatar" src="images/team/mudassir.webp" alt="Mudassir" loading="lazy"><div class="assoc-body"><h4>Mudassir</h4><div class="quals">Process Associate</div></div></div>
       <div class="assoc-card animate-slide-up delay-300"><div class="assoc-avatar">VA</div><div class="assoc-body"><h4>Vani Arora</h4><div class="quals">Process Associate</div></div></div>
     </div>
   </div>
@@ -677,7 +686,7 @@
 
     <div class="partners-row">
       <div class="partner-card-new">
-        <div class="partner-avatar">GG</div>
+        <img class="partner-avatar" src="images/team/gagan-gulati.webp" alt="Gagan Gulati">
         <div class="partner-body">
           <h3>Mr. Gagan Gulati</h3>
           <div class="role">Founder Member &ndash; Corporate &amp; IBC Advisory</div>
@@ -695,7 +704,7 @@
       </div>
 
       <div class="partner-card-new">
-        <div class="partner-avatar">NK</div>
+        <img class="partner-avatar" src="images/team/nitin-kumar.webp" alt="Nitin Kumar">
         <div class="partner-body">
           <h3>Mr. Nitin Kumar</h3>
           <div class="role">Partner &ndash; Corporate Restructuring &amp; Compliance</div>
@@ -713,7 +722,7 @@
       </div>
 
       <div class="partner-card-new">
-        <div class="partner-avatar">YB</div>
+        <img class="partner-avatar" src="images/team/yogita-bhatia.webp" alt="Yogita Bhatia">
         <div class="partner-body">
           <h3>Ms. Yogita Bhatia</h3>
           <div class="role">Partner &ndash; Secretarial &amp; Regulatory Compliances</div>
@@ -731,7 +740,7 @@
       </div>
 
       <div class="partner-card-new">
-        <div class="partner-avatar">PJ</div>
+        <img class="partner-avatar" src="images/team/pankaj-jangid.webp" alt="Pankaj Jangid">
         <div class="partner-body">
           <h3>Mr. Pankaj Jangid</h3>
           <div class="role">Partner &ndash; Taxation</div>
@@ -809,7 +818,7 @@
         <!-- Brand -->
         <div>
           <a href="index.html" class="footer-logo" style="text-decoration: none;">
-            <img src="images/white_logo.png" alt="Lexmart Logo"
+            <img src="images/white_logo_footer.png" alt="Lexmart Logo"
               style="height:140px; width:auto; object-fit:contain; border-radius:8px;">
           </a>
           <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing compliance.</p>
@@ -865,7 +874,7 @@
           <ul class="contact-list">
             <li><svg class="icon">
                 <use href="#i-phone" />
-              </svg><span><a href="tel:+919999028148">+91 99990-28148</a><br><a href="tel:+919811541004">+91 98115-41004</a></span></li>
+              </svg><span><a href="tel:+919354274964">+91 93542-74964</a></span></li>
             <li><svg class="icon">
                 <use href="#i-mail" />
               </svg><span><a href="mailto:connect@lexmart.co.in">connect@lexmart.co.in</a></span></li>

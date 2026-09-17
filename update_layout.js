@@ -31,7 +31,7 @@ function processDir(dir) {
             }
 
             // 3. Increase footer logo size (from 100px to 140px)
-            const footerLogoRegex = /(<img src="images\/white_logo\.png" alt="Lexmart Logo"\s*style="height:)100px(; width:auto; object-fit:contain; border-radius:8px;">)/;
+            const footerLogoRegex = /(<img src="images\/white_logo_footer\.png" alt="Lexmart Logo"\s*style="height:)100px(; width:auto; object-fit:contain; border-radius:8px;">)/;
             if (footerLogoRegex.test(content)) {
                 content = content.replace(footerLogoRegex, '$1140px$2');
                 modified = true;

@@ -52,8 +52,7 @@
           '<a href="blogs.html" class="' + activeClass("blogs.html", current).trim() + '">Blogs</a>' +
           '<a href="contact.html" class="' + activeClass("contact.html", current).trim() + '">Contact</a>' +
         '</nav>' +
-        '<a href="contact.html" class="btn-consult"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a Consultation</a>' +
-        '<button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>' +
+      '<a href="https://wa.me/919354274964?text=Hello%20Lexmart%2C%20I%20would%20like%20to%20book%20a%20consultation.%20I%20visited%20https%3A%2F%2Flexmart.brandmindz.in%2F%20and%20would%20like%20to%20know%20more%20about%20your%20legal%20services." class="btn-consult" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a Consultation</a>' +        '<button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '</div></header>' +
       '<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">' +
         '<button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">&times;</button>' +

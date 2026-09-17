@@ -7,7 +7,7 @@ const correctFooter = `  <footer>
         <!-- Brand -->
         <div>
           <a href="index.html" class="footer-logo" style="text-decoration: none;">
-            <img src="images/white_logo.png" alt="Lexmart Logo"
+            <img src="images/white_logo_footer.png" alt="Lexmart Logo"
               style="height:140px; width:auto; object-fit:contain; border-radius:8px;">
           </a>
           <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing compliance.</p>
@@ -62,7 +62,7 @@ const correctFooter = `  <footer>
           <ul class="contact-list">
             <li><svg class="icon">
                 <use href="#i-phone" />
-              </svg><span><a href="tel:+919999028148">+91 99990-28148</a><br><a href="tel:+919811541004">+91 98115-41004</a></span></li>
+              </svg><span><a href="tel:+919354274964">+91 93542-74964</a><br><a href="tel:+919354274964">+91 93542-74964</a></span></li>
             <li><svg class="icon">
                 <use href="#i-mail" />
               </svg><span><a href="mailto:connect@lexmart.co.in">connect@lexmart.co.in</a></span></li>

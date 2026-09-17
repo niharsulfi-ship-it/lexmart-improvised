@@ -232,96 +232,71 @@
       line-height: 1.6;
     }
 
-    /* Mission & Vision split */
+    /* Combined Vision & Mission */
     .mv-section {
-      background: linear-gradient(150deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%), url('images/WHAT DRIVES US.webp') center/cover no-repeat;
-      padding: 80px 0;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(110deg, rgba(5, 20, 56, .96), rgba(5, 20, 56, .82)), url('images/WHAT DRIVES US.webp') center/cover no-repeat;
+      padding: 88px 0;
+      color: #fff;
     }
 
-    .mv-section::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      top: -160px;
-      right: -100px;
-      pointer-events: none;
+    .mv-content {
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
-    .mv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      position: relative;
-      z-index: 2;
+    .mv-intro {
+      max-width: 760px;
+      margin: 0 auto 44px;
+      text-align: center;
     }
 
-    .mv-card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 44px;
-      backdrop-filter: blur(6px);
-      transition: background .3s ease, transform .3s ease;
+    .mv-intro .section-title {
+      color: #fff;
+      margin: 18px 0;
     }
 
-    .mv-card:hover {
-      background: rgba(255, 255, 255, 0.18);
-      transform: translateY(-4px);
-    }
-
-    .mv-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      margin-bottom: 24px;
-    }
-
-    .mv-card h3 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 14px;
-    }
-
-    .mv-card p {
-      font-size: 14.5px;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.75;
-      margin-bottom: 12px;
-    }
-
-    .mv-card ul {
-      list-style: none;
-      padding: 0;
+    .mv-lead {
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.6;
+      color: #e0eaff;
       margin: 0;
     }
 
-    .mv-card ul li {
-      font-size: 14.5px;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.6;
-      margin-bottom: 14px;
-      padding-left: 20px;
-      position: relative;
+    .mv-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, .24);
     }
 
-    .mv-card ul li::before {
-      content: "\2022";
-      position: absolute;
-      left: 0;
-      top: 0px;
-      color: var(--blue-100);
-      font-size: 14px;
+    .mv-pillar-number {
+      display: block;
+      color: #a9c8ff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      margin-bottom: 16px;
+    }
+
+    .mv-pillar h3 {
+      color: #fff;
+      font-size: 19px;
+      margin: 0 0 12px;
+    }
+
+    .mv-pillar p {
+      color: #d0dbed;
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      .mv-section { padding: 56px 0; }
+      .mv-intro { text-align: left; margin-bottom: 32px; }
+      .mv-pillars { grid-template-columns: 1fr; gap: 28px; }
+      .mv-pillar-number { margin-bottom: 8px; }
     }
 
     /* Core Values */
@@ -1020,38 +995,34 @@
     </div>
   </section>
 
-  <!-- -- MISSION & VISION -- -->
-  <section class="mv-section">
+  <!-- -- VISION & MISSION -- -->
+  <section class="mv-section" aria-labelledby="vision-mission-title">
     <div class="container">
-      <div class="center" style="margin-bottom:48px;">
-        <span class="eyebrow"
-          style="background:rgba(255,255,255,0.15);color:#ffffff;border:1px solid rgba(255,255,255,0.25);">WHAT DRIVES
-          US</span>
-        <h2 class="section-title" style="color:#ffffff;">Purpose Behind Every Case</h2>
-      </div>
-      <div class="mv-grid">
-        <div class="mv-card">
-          <div class="mv-icon"><svg class="icon" style="width:24px;height:24px;">
-              <use href="#i-eye" />
-            </svg></div>
-          <h3>Our Vision</h3>
-          <ul>
-            <li>To be a trusted and leading corporate and advisory partner.</li>
-            <li>Most Preferred Work Place.</li>
-          </ul>
+      <div class="mv-content">
+        <div class="mv-intro">
+          <span class="eyebrow"
+            style="background:rgba(255,255,255,0.1);color:#ffffff;border:1px solid rgba(255,255,255,0.2);">WHAT DRIVES US</span>
+          <h2 class="section-title" id="vision-mission-title">Our Vision &amp; Mission</h2>
+          <p class="mv-lead">To be a trusted and leading corporate and advisory partner.</p>
         </div>
-        <div class="mv-card">
-          <div class="mv-icon"><svg class="icon" style="width:24px;height:24px;">
-              <use href="#i-target" />
-            </svg></div>
-          <h3>Our Mission</h3>
-          <p>At Lexmart Corporate Solutions LLP, our mission is to:</p>
-          <ul>
-            <li>Deliver client-centric professional and consulting services across Taxation, Compliance, Insolvency, and
-              M&amp;A with the highest standards of integrity.</li>
-            <li>Empower clients to navigate regulatory complexities with confidence, building long-term relationships
-              through reliable, proactive counsel.</li>
-          </ul>
+        <div class="mv-pillars">
+          <div class="mv-pillar">
+            <span class="mv-pillar-number">01</span>
+            <h3>Excellence with integrity</h3>
+            <p>Deliver client-centric professional and consulting services across Taxation, Compliance, Insolvency, and
+              M&amp;A with the highest standards of integrity.</p>
+          </div>
+          <div class="mv-pillar">
+            <span class="mv-pillar-number">02</span>
+            <h3>Confidence through partnership</h3>
+            <p>Empower clients to navigate regulatory complexities with confidence, building long-term relationships
+              through reliable, proactive counsel.</p>
+          </div>
+          <div class="mv-pillar">
+            <span class="mv-pillar-number">03</span>
+            <h3>A preferred workplace</h3>
+            <p>To be a most preferred workplace.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1258,7 +1229,7 @@
         <!-- Brand -->
         <div>
           <a href="index.html" class="footer-logo" style="text-decoration: none;">
-            <img src="images/white_logo.png" alt="Lexmart Logo"
+            <img src="images/white_logo_footer.png" alt="Lexmart Logo"
               style="height:140px; width:auto; object-fit:contain; border-radius:8px;">
           </a>
           <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing
@@ -1315,8 +1286,7 @@
           <ul class="contact-list">
             <li><svg class="icon">
                 <use href="#i-phone" />
-              </svg><span><a href="tel:+919999028148">+91 99990-28148</a><br><a href="tel:+919811541004">+91
-                  98115-41004</a></span></li>
+              </svg><span><a href="tel:+919354274964">+91 93542-74964</a></span></li>
             <li><svg class="icon">
                 <use href="#i-mail" />
               </svg><span><a href="mailto:connect@lexmart.co.in">connect@lexmart.co.in</a></span></li>
