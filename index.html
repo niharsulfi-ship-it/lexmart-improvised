@@ -1273,7 +1273,7 @@ We value our association with Lexmart and look forward to a long-term partnershi
       <div class="center"><span class="eyebrow">INSIGHTS</span></div>
       <h2 class="section-title">Latest Blogs</h2>
       <p class="section-sub">Practical guidance on regulation, structuring, and protecting what you build.</p>
-      <div class="blogs-grid" id="homeBlogsGrid" aria-live="polite" aria-busy="true">
+      <div class="blogs-grid is-loading" id="homeBlogsGrid" aria-live="polite" aria-busy="true">
         <article class="blog-card">
           <div class="blog-thumb">
             <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Corporate Law blog">
@@ -1556,13 +1556,19 @@ We value our association with Lexmart and look forward to a long-term partnershi
             emptyMessage.textContent = 'No blog articles are available yet. Please check back soon.';
             emptyMessage.style.cssText = 'grid-column:1 / -1;text-align:center;color:var(--ink-soft);';
             blogsGrid.replaceChildren(emptyMessage);
+            blogsGrid.classList.remove('is-loading');
             return;
           }
 
           blogsGrid.replaceChildren(...latestBlogs.map(createBlogCard));
+          blogsGrid.classList.remove('is-loading');
         } catch (error) {
-          // Retain the static articles as a progressive-enhancement fallback.
           console.error('Unable to load the latest blogs:', error);
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = 'Unable to load blog articles right now. Please try again shortly.';
+          errorMessage.style.cssText = 'grid-column:1 / -1;text-align:center;color:var(--ink-soft);';
+          blogsGrid.replaceChildren(errorMessage);
+          blogsGrid.classList.remove('is-loading');
         } finally {
           window.clearTimeout(timeoutId);
           blogsGrid.setAttribute('aria-busy', 'false');

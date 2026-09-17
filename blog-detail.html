@@ -13,7 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260907.2">
+  <link rel="stylesheet" href="style.css?v=20260917.1">
   <style>
     .bd-hero {
       background: var(--blue-900);
@@ -270,7 +270,7 @@
   </style>
 </head>
 
-<body>
+<body class="blog-loading">
 
   <svg width="0" height="0" style="position:absolute">
     <defs>
@@ -344,8 +344,9 @@
     </defs>
   </svg>
 
-  <div id="site-header"></div>
+<div id="site-header"></div>
 <script src="header.js?v=20260907.2" defer></script>
+
 
   <section class="bd-hero animate-fade-in" id="blogHero">
     <div class="container bd-hero-inner">
@@ -624,7 +625,10 @@
       const endpoint = 'https://lexmart.brandmindz.in/api/blogs.php';
       const contentElement = document.getElementById('blogContent');
 
-      if (!blogId || !contentElement) return;
+      if (!blogId || !contentElement) {
+        document.body.classList.remove('blog-loading');
+        return;
+      }
 
       function formatDate(dateValue) {
         const date = new Date(dateValue);
@@ -838,9 +842,19 @@
           appendSafeContent(contentElement, blog.content || blog.short_description);
           renderLatestBlogs(result.data);
           setShareLinks(blog);
+          document.body.classList.remove('blog-loading');
         } catch (error) {
-          // Preserve the existing static article as a fallback.
           console.error('Unable to load blog details from the database:', error);
+          document.getElementById('blogCategory').textContent = 'Article';
+          document.getElementById('blogDateText').textContent = '';
+          document.getElementById('blogTitle').textContent = 'Article unavailable';
+          contentElement.replaceChildren();
+          const message = document.createElement('p');
+          message.textContent = 'This article could not be loaded. Please return to the Blogs page and try again.';
+          contentElement.appendChild(message);
+          const relatedWidget = document.getElementById('relatedBlogsWidget');
+          if (relatedWidget) relatedWidget.hidden = true;
+          document.body.classList.remove('blog-loading');
         }
       }
 

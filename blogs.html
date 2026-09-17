@@ -119,7 +119,7 @@
 
   <section>
     <div class="container">
-      <div class="blogs-grid" id="blogsGrid">
+      <div class="blogs-grid is-loading" id="blogsGrid" aria-live="polite" aria-busy="true">
         <!-- Blog 1 -->
         <div class="blog-card animate-slide-up delay-100" onclick="window.location.href='blog-detail.html';"
           style="cursor: pointer;">
@@ -394,8 +394,8 @@
             throw new Error('Invalid blog API response');
           }
 
-          // A successful database response replaces the static fallback content.
           blogsGrid.replaceChildren();
+          blogsGrid.classList.remove('is-loading');
 
           if (result.data.length === 0) {
             const emptyMessage = document.createElement('p');
@@ -409,8 +409,14 @@
             blogsGrid.appendChild(createBlogCard(blog, index));
           });
         } catch (error) {
-          // Keep the existing static cards visible if the database cannot be reached.
           console.error('Unable to load blogs from the database:', error);
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = 'Unable to load blog articles right now. Please try again shortly.';
+          errorMessage.style.cssText = 'grid-column: 1 / -1; text-align: center; color: var(--ink-soft);';
+          blogsGrid.replaceChildren(errorMessage);
+          blogsGrid.classList.remove('is-loading');
+        } finally {
+          blogsGrid.setAttribute('aria-busy', 'false');
         }
       }
 
