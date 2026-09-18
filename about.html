@@ -455,6 +455,47 @@
       box-shadow: 0 8px 20px rgba(12, 70, 187, 0.3);
     }
 
+    img.partner-avatar {
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      background: #dbeafe !important;
+      animation: none !important;
+      border: 2px solid #dbeafe;
+    }
+
+    .partner-profile-link {
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+      line-height: 0;
+      border-radius: 50%;
+    }
+
+    .partner-profile-link::after {
+      content: "in";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(10, 102, 194, .88);
+      color: #fff;
+      font: 700 25px/1 Arial, sans-serif;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    .partner-profile-link:hover::after,
+    .partner-profile-link:focus-visible::after {
+      opacity: 1;
+    }
+
+    .partner-profile-link:focus-visible {
+      outline: 3px solid var(--blue-500);
+      outline-offset: 3px;
+    }
+
     .partner-body {
       flex: 1;
     }
@@ -1088,7 +1129,7 @@
       <div class="partners-row">
         <!-- Partner 1 -->
         <div class="partner-card-new">
-          <div class="partner-avatar">GG</div>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/yogita-bhatia-234b47a9?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="View Gagan Gulati's LinkedIn profile"><img class="partner-avatar" src="images/team/gagan-gulati.webp" alt="Gagan Gulati" loading="lazy"></a>
           <div class="partner-body">
             <h3>Mr. Gagan Gulati</h3>
             <div class="role">Founder Member &ndash; Corporate &amp; IBC Advisory</div>
@@ -1107,7 +1148,7 @@
         </div>
         <!-- Partner 2 -->
         <div class="partner-card-new">
-          <div class="partner-avatar">NK</div>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/yogita-bhatia-234b47a9?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="View Nitin Kumar's LinkedIn profile"><img class="partner-avatar" src="images/team/nitin-kumar.webp" alt="Nitin Kumar" loading="lazy"></a>
           <div class="partner-body">
             <h3>Mr. Nitin Kumar</h3>
             <div class="role">Partner &ndash; Corporate Restructuring &amp; Compliance</div>
@@ -1126,7 +1167,7 @@
         </div>
         <!-- Partner 3 -->
         <div class="partner-card-new">
-          <div class="partner-avatar">YB</div>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/yogita-bhatia-234b47a9?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="View Yogita Bhatia's LinkedIn profile"><img class="partner-avatar" src="images/team/yogita-bhatia.webp" alt="Yogita Bhatia" loading="lazy"></a>
           <div class="partner-body">
             <h3>Ms. Yogita Bhatia</h3>
             <div class="role">Partner &ndash; Secretarial &amp; Regulatory Compliances</div>
@@ -1144,7 +1185,7 @@
         </div>
         <!-- Partner 4 -->
         <div class="partner-card-new">
-          <div class="partner-avatar">PJ</div>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/capankajjangid/" target="_blank" rel="noopener noreferrer" aria-label="View Pankaj Jangid's LinkedIn profile"><img class="partner-avatar" src="images/team/pankaj-jangid.webp" alt="Pankaj Jangid" loading="lazy"></a>
           <div class="partner-body">
             <h3>Mr. Pankaj Jangid</h3>
             <div class="role">Partner &ndash; Taxation</div>
@@ -1235,18 +1276,8 @@
           <p>Corporate and business consulting for startups, SMEs, and enterprises &ndash; from incorporation to ongoing
             compliance.</p>
           <div class="social-row">
-            <a class="social-circle" href="#"><svg class="icon" style="width:16px;height:16px;">
-                <use href="#i-linkedin" />
-              </svg></a>
-            <a class="social-circle" href="#"><svg class="icon" style="width:16px;height:16px;">
-                <use href="#i-twitter" />
-              </svg></a>
-            <a class="social-circle" href="#"><svg class="icon" style="width:16px;height:16px;">
-                <use href="#i-facebook" />
-              </svg></a>
-            <a class="social-circle" href="#"><svg class="icon" style="width:16px;height:16px;">
-                <use href="#i-instagram" />
-              </svg></a>
+            <a class="social-circle" href="https://www.linkedin.com/company/90358388/admin/dashboard/" target="_blank" rel="noopener noreferrer" aria-label="Follow Lexmart on LinkedIn"><svg class="icon" style="width:16px;height:16px;"><use href="#i-linkedin" /></svg></a>
+            <a class="social-circle" href="https://www.instagram.com/lexmartcorporatesolution_15/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Follow Lexmart on Instagram"><svg class="icon" style="width:16px;height:16px;"><use href="#i-instagram" /></svg></a>
           </div>
         </div>
         <!-- Company -->

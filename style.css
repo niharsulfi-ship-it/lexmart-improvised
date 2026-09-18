@@ -2525,8 +2525,7 @@ nav.links {
   }
 }
 
-/* == Social media icons hidden site-wide (re-enable by removing this rule) == */
-.social-row,
+/* Article sharing remains hidden; footer social links are visible. */
 .share-btn {
   display: none !important;
 }
