@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260907.2">
+  <link rel="stylesheet" href="style.css?v=20260929.5">
   <style>
     .contact-hero {
       background: var(--blue-900);
@@ -124,12 +124,42 @@
     .contact-info-wrap .social-circle {
       border-color: var(--blue-100);
       color: var(--blue-700);
+      transition: transform .25s ease, border-color .25s ease, color .25s ease, box-shadow .25s ease;
     }
 
     .contact-info-wrap .social-circle:hover {
-      background: var(--blue-700);
-      border-color: var(--blue-700);
-      color: #ffffff;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), #8c641d);
+      border-color: var(--gold-light);
+      color: var(--blue-900);
+      box-shadow: 0 8px 18px rgba(182, 138, 50, .3);
+      transform: translateY(-3px);
+    }
+
+    .contact-form-card {
+      position: relative;
+      overflow: hidden;
+      border-color: rgba(182, 138, 50, .3);
+    }
+
+    .contact-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 7%;
+      right: 7%;
+      height: 3px;
+      border-radius: 0 0 999px 999px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+    }
+
+    .contact-form-card > * {
+      position: relative;
+    }
+
+    .contact-form-card .form-input:focus,
+    .contact-form-card .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(182, 138, 50, .15);
     }
 
     .map-wrap {

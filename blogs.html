@@ -13,7 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260907.2">
+  <link rel="stylesheet" href="style.css?v=20260929.5">
   <style>
     .blog-hero {
       background: var(--blue-50);
@@ -25,6 +25,17 @@
       font-size: 48px;
       color: var(--blue-800);
       margin-bottom: 20px;
+      position: relative;
+    }
+
+    .blog-hero h1::after {
+      content: '';
+      display: block;
+      width: 104px;
+      height: 3px;
+      margin: 18px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
     }
 
     .blog-hero p {
@@ -32,6 +43,57 @@
       color: var(--ink-soft);
       max-width: 600px;
       margin: 0 auto;
+    }
+
+    .blog-card {
+      position: relative;
+      border: 1px solid rgba(182, 138, 50, .16);
+      box-shadow: 0 8px 24px rgba(12, 70, 187, .04);
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .blog-card::after {
+      content: '';
+      position: absolute;
+      right: 11%;
+      bottom: 0;
+      left: 11%;
+      height: 3px;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+      opacity: .45;
+      transition: opacity .28s ease, left .28s ease, right .28s ease;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(182, 138, 50, .45);
+      box-shadow: 0 16px 34px rgba(12, 70, 187, .12);
+      transform: translateY(-5px);
+    }
+
+    .blog-card:hover::after {
+      left: 6%;
+      right: 6%;
+      opacity: 1;
+    }
+
+    .blog-card:hover .blog-tag {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--blue-900);
+    }
+
+    .blog-body a {
+      background-image: linear-gradient(90deg, var(--gold), var(--gold-light));
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 0 2px;
+      padding-bottom: 3px;
+      transition: background-size .25s ease, color .25s ease;
+    }
+
+    .blog-body a:hover {
+      background-size: 100% 2px;
+      color: var(--blue-900);
     }
   </style>
 </head>

@@ -13,7 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260907.2">
+  <link rel="stylesheet" href="style.css?v=20260929.5">
   <style>
     /* ── About-page-specific styles ── */
 
@@ -223,13 +223,25 @@
       margin-top: 32px;
       padding: 24px 28px;
       background: var(--blue-50);
-      border-left: 4px solid var(--blue-700);
       border-radius: 0 12px 12px 0;
       font-size: 15px;
       font-style: italic;
       color: var(--blue-800);
       font-weight: 500;
       line-height: 1.6;
+      text-align: center;
+      position: relative;
+    }
+
+    .story-quote::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      left: 0;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--gold-light), var(--gold), var(--gold-light));
     }
 
     /* Combined Vision & Mission */
@@ -357,7 +369,7 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, #d6e4ff, #ffffff);
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), #ffffff);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .35s ease;
@@ -1129,7 +1141,7 @@
       <div class="partners-row">
         <!-- Partner 1 -->
         <div class="partner-card-new">
-          <a class="partner-profile-link" href="https://www.linkedin.com/in/yogita-bhatia-234b47a9?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="View Gagan Gulati's LinkedIn profile"><img class="partner-avatar" src="images/team/gagan-gulati.webp" alt="Gagan Gulati" loading="lazy"></a>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/gagan-gulati-95714523/" target="_blank" rel="noopener noreferrer" aria-label="View Gagan Gulati's LinkedIn profile"><img class="partner-avatar" src="images/team/gagan-gulati.webp" alt="Gagan Gulati" loading="lazy"></a>
           <div class="partner-body">
             <h3>Mr. Gagan Gulati</h3>
             <div class="role">Founder Member &ndash; Corporate &amp; IBC Advisory</div>
@@ -1148,7 +1160,7 @@
         </div>
         <!-- Partner 2 -->
         <div class="partner-card-new">
-          <a class="partner-profile-link" href="https://www.linkedin.com/in/yogita-bhatia-234b47a9?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="View Nitin Kumar's LinkedIn profile"><img class="partner-avatar" src="images/team/nitin-kumar.webp" alt="Nitin Kumar" loading="lazy"></a>
+          <a class="partner-profile-link" href="https://www.linkedin.com/in/nitin-kumar-3b148645/" target="_blank" rel="noopener noreferrer" aria-label="View Nitin Kumar's LinkedIn profile"><img class="partner-avatar" src="images/team/nitin-kumar.webp" alt="Nitin Kumar" loading="lazy"></a>
           <div class="partner-body">
             <h3>Mr. Nitin Kumar</h3>
             <div class="role">Partner &ndash; Corporate Restructuring &amp; Compliance</div>

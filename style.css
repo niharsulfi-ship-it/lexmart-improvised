@@ -9,7 +9,8 @@
   --ink-soft: #475569;
   --border: #e2e8f0;
   --white: #ffffff;
-  --gold: #f59e0b;
+  --gold: #b68a32;
+  --gold-light: #f1d98e;
   --radius: 18px;
 }
 
@@ -99,6 +100,16 @@ h3 {
   margin-bottom: 14px;
 }
 
+/* Signature gold rule inspired by Lexmart's stationery. */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 2px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+}
+
 .section-sub {
   text-align: center;
   color: var(--ink-soft);
@@ -127,6 +138,21 @@ h3 {
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+/* Gold hover line for action buttons. */
+.btn:not(.btn-orange):not(.btn-purple):not(.btn-green),
+.hero-slide-cta {
+  background-image: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0 3px;
+  transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease, background-size .25s ease, color .25s ease;
+}
+
+.btn:not(.btn-orange):not(.btn-purple):not(.btn-green):hover,
+.hero-slide-cta:hover {
+  background-size: 100% 3px;
 }
 
 .btn-primary {
@@ -254,7 +280,7 @@ nav.links a {
 
 nav.links a.active {
   color: var(--blue-700);
-  border-bottom: 2px solid var(--blue-700);
+  border-bottom: 2px solid var(--gold);
   font-weight: 600;
 }
 
@@ -269,6 +295,8 @@ nav.links a:hover {
 .btn-consult {
   flex-shrink: 0;
   display: inline-flex;
+  position: relative;
+  overflow: hidden;
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
@@ -287,6 +315,23 @@ nav.links a:hover {
   color: #fff;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(6, 45, 128, .5);
+}
+
+.btn-consult::after {
+  content: '';
+  position: absolute;
+  right: 16%;
+  bottom: 6px;
+  left: 16%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+
+.btn-consult:hover::after {
+  transform: scaleX(1);
 }
 
 .btn-consult svg {
@@ -813,8 +858,8 @@ section {
 }
 
 .process-step {
-  text-align: left;
-  padding: 0 16px 0 0;
+  text-align: center;
+  padding: 0 16px;
   position: relative;
 }
 
@@ -829,7 +874,7 @@ section {
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   position: relative;
   z-index: 2;
 }
@@ -838,10 +883,10 @@ section {
   content: "";
   position: absolute;
   top: 21px;
-  left: 42px;
-  right: 0;
+  left: calc(50% + 21px);
+  right: calc(-50% + 21px);
   height: 2px;
-  background: var(--border);
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
 }
 
 .process-step h3 {
@@ -1113,6 +1158,24 @@ section {
   overflow: hidden;
 }
 
+.cta-banner {
+  box-shadow: inset 0 2px 0 rgba(241, 217, 142, .9), 0 18px 45px rgba(2, 11, 51, .2);
+}
+
+.svc-content h2::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 2px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
+}
+
+/* Gold active rule for every service-page tab. */
+.section-tab.active {
+  border-bottom-color: var(--gold) !important;
+}
+
 .cta-banner::before {
   content: "";
   position: absolute;
@@ -1154,6 +1217,8 @@ footer {
   background: var(--blue-900);
   color: #ffffff;
   padding: 60px 0 0;
+  border-top: 3px solid var(--gold);
+  box-shadow: inset 0 1px 0 rgba(241, 217, 142, .75);
 }
 
 .footer-grid {
